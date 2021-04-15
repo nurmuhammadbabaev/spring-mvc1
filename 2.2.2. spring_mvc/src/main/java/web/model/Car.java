@@ -1,42 +1,50 @@
 package web.model;
 
-public class Car {
-    private String model;
-    private int series;
-    private int productionYear;
 
-    public Car(String model, int series, int productionYear) {
-        this.model = model;
-        this.series = series;
-        this.productionYear = productionYear;
+
+
+public class  Car {
+    int id ;
+    String name;
+    String madeIn;
+
+    public Car() {
     }
 
-    public String getModel() {
-        return model;
+    public Car(int id, String name, String madeIn) {
+        this.id = id;
+        this.name = name;
+        this.madeIn = madeIn;
     }
 
-    public void setModel(String model) {
-        this.model = model;
+    public int getId() {
+        return id;
     }
 
-    public int getSeries() {
-        return series;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setSeries(int series) {
-        this.series = series;
+    public String getName() {
+        return name;
     }
 
-    public int getProductionYear() {
-        return productionYear;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setProductionYear(int productionYear) {
-        this.productionYear = productionYear;
+    public String getMadeIn() {
+        return madeIn;
+    }
+
+    public void setMadeIn(String madeIn) {
+        this.madeIn = madeIn;
     }
 
     @Override
     public String toString() {
-        return "Cars model " + model + ", series " + series + ", productionYear " + productionYear;
+        return  id +
+                " " + name +
+                " " + madeIn;
     }
 }
